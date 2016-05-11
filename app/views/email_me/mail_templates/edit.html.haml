@@ -1,0 +1,45 @@
+= aals_admin_nav 'emails'
+
+%h1 Edit Mail Template
+
+= simple_form_for @mail_template do |f|
+  = f.input :name, input_html: { readonly: true}
+  = f.input :description, input_html: { readonly: true}
+  = f.input :subject
+  .row
+    .col-md-8
+      = f.input :content
+    - unless @replacement_fields.empty?
+      .col-md-4
+        .form-group
+          %label.control-label Replacement Fields
+          %p The following fields are available to use in the email.  Make sure you copy the full field, including the open and closing braces.
+          %dl
+            - @replacement_fields.each do |field, desc|
+              %dt= field
+              %dd= desc
+
+  = f.button :submit, class: 'btn btn-primary'
+  = link_to 'Cancel', :back, class: 'btn btn-link'
+
+:javascript
+  $(function(){
+    $('#mail_template_content').markdownEditor({
+      preview: true,
+      fullscreen: false,
+      imageUpload: false,
+      height: '300px',
+      onPreview: function (content, callback) {
+        $.ajax({
+          url: 'preview',
+          type: 'POST',
+          dataType: 'html',
+          data: {content: content},
+        })
+        .done(function(result) {
+          // Return the html:
+          callback(result);
+        });
+      }
+    });
+  })
