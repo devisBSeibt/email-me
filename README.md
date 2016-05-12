@@ -53,13 +53,19 @@ views/email_me/db_mail_template_mailer
 
 ## To Use
 
-Mount in your routes
+Mount in your routes. Put in a constraint if authentication is needed.
 
 ```
 mount EmailMe::Engine => "/emails", as: "emails"
 ```
 
-Put in a constraint if authentication is needed
+Require the JS in application.js.coffee
+
+```
+#= require email_me/application.js
+```
+
+Run db:migrate.  Note this engine has a migration that should be run.  It will create the email_me_mail_templates table.
 
 ## Dependencies/Assumptions
 
