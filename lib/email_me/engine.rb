@@ -14,11 +14,7 @@ module EmailMe
       end
     end
 
-
-    # config.assets.paths << Rails.root.join("vendor/assets/stylesheets")
     config.assets.paths << File.expand_path("../../vendor/assets/stylesheets", __FILE__)
-
-
 
   end
 end

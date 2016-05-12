@@ -10,7 +10,6 @@ module EmailMe
       Rails.logger.debug mail_template.content
 
       liquid_template = Liquid::Template.parse(mail_template.content)
-      Rails.logger.debug liquid_template
 
       processed_template = liquid_template.render(params)
 
@@ -29,10 +28,6 @@ module EmailMe
            template_path: 'email_me/db_mail_template_mailer',
            template_name: :mail_template_email)
 
-      # mail(:to => user.email, subject: mail_template.subject) do |format|
-      #   format.text { render plain: plain_text_mail }
-      #   format.html { render html: html_mail.html_safe }
-      # end
     end
   end
 end

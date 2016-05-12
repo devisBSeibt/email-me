@@ -1,13 +1,21 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+mail_template_one:
+  name: mail_template_one_name
+  description: description here
+  subject: Mail Template Subject
+  content: This is the body of the email
 
-one:
-  name: MyString
-  description: MyString
-  subject: MyString
-  content: MyText
+mail_template_with_md_url:
+  name: mail_template_with_md_url_name
+  description: description here
+  subject: This email has a md url in it
+  content: >
+    #Test content
 
-two:
-  name: MyString
-  description: MyString
-  subject: MyString
-  content: MyText
+    [This is the link](http://www.devis.com)
+
+
+mail_template_with_liquid:
+  name: mail_template_with_liquid_name
+  description: description here
+  subject: This email replacement fields in liquid
+  content: Dear {{user_full_name}}.  Welcome to my cool app.

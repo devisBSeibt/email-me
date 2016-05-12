@@ -24,5 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency "redcarpet", "~> 3.3.4"
   s.add_dependency "liquid", "~> 3.0.6"
 
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency "sqlite3", "~> 1.3.11"
+  s.add_development_dependency "minitest", "~> 5.8"
+  s.add_development_dependency "simple_form", "~> 3.2.1"
 end

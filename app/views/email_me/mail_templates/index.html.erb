@@ -1,0 +1,19 @@
+
+<h1>Mail Templates from Engine</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Subject</th>
+      <td class="empty-header"></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @mail_templates.each do |mail_template| %>
+      <tr>
+        <td><%= mail_template.subject %></td>
+        <td><%= link_to 'Edit', edit_mail_template_path(mail_template), class: "btn btn-default btn-xs" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>

@@ -9,4 +9,5 @@ test/dummy/.sass-cache
 
 .idea
 *.iml
+/Gemfile.lock
 *.gem
