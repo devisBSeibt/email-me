@@ -11,3 +11,5 @@ test/dummy/.sass-cache
 *.iml
 /Gemfile.lock
 *.gem
+/.ruby-version
+/.ruby-gemset

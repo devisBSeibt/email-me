@@ -2,7 +2,7 @@ mail_template_one:
   name: mail_template_one_name
   description: description here
   subject: Mail Template Subject
-  content: This is the body of the email
+  content: "#This is the body of the email"
 
 mail_template_with_md_url:
   name: mail_template_with_md_url_name
