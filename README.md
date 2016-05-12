@@ -41,17 +41,23 @@ EmailMe.replacement_fields = {
 Views are provided for index and edit.  If you need to customize, just override the views
 by putting your version in
 
-```views/email_me/mail_templates```
+```
+views/email_me/mail_templates
+```
 
 You can also modify the mailer view by overriding what is in
 
-```views/email_me/db_mail_template_mailer```
+```
+views/email_me/db_mail_template_mailer
+```
 
 ## To Use
 
 Mount in your routes
 
-```    mount EmailMe::Engine => "/emails", as: "emails"```
+```
+mount EmailMe::Engine => "/emails", as: "emails"
+```
 
 Put in a constraint if authentication is needed
 
