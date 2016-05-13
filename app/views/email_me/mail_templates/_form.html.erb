@@ -3,23 +3,23 @@
   <%= f.input :description, input_html: { readonly: true} %>
   <%= f.input :subject %>
   <div class="row">
-      <div class="col-md-8">
-          <%= f.input :content %>
-      </div>
-      <% unless @replacement_fields.empty? %>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label class="control-label"><%= t 'email_me.form.replacement_field_label' %></label>
-                <p><%= t 'email_me.form.replacement_field_instr' %></p>
-                <dl>
-                    <% @replacement_fields.each do |field, desc| %>
-                      <dt><%= field %></dt>
-                      <dd><%= desc %></dd>
-                    <% end %>
-                </dl>
-            </div>
+    <div class="col-md-8">
+      <%= f.input :content %>
+    </div>
+    <% unless @replacement_fields.empty? %>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label class="control-label"><%= t 'email_me.form.replacement_field_label' %></label>
+          <p><%= t 'email_me.form.replacement_field_instr' %></p>
+          <dl>
+            <% @replacement_fields.each do |field, desc| %>
+              <dt><%= field %></dt>
+              <dd><%= desc %></dd>
+            <% end %>
+          </dl>
         </div>
-      <% end %>
+      </div>
+    <% end %>
   </div>
   <%= f.button :submit, class: 'btn btn-primary' %>
   <%= link_to 'Cancel', :back, class: 'btn btn-link' %>

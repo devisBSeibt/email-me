@@ -67,6 +67,11 @@ Require the JS in application.js.coffee
 
 Run db:migrate.  Note this engine has a migration that should be run.  It will create the email_me_mail_templates table.
 
+**Important**
+
+If you are using HAML in your main application, you must configure HAML to run in "ugly" mode to ensure the textarea and
+whitespace get along.
+
 ## Dependencies/Assumptions
 
 This engine assumes your app is already using SimpleForm and Bootstrap
