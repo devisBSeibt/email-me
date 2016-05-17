@@ -6,6 +6,7 @@ en:
       replacement_field_instr: The following fields are available to use in the email.  Make sure you copy the full field, including the open and closing braces.
       replacement_field_label: Replacement Fields
     index_body:
+      description_header: Description
       header: Mail Templates
       subject_header: Subject
 
