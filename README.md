@@ -1,5 +1,7 @@
 # EmailMe
 
+[![Build Status](https://travis-ci.org/devis/email-me.svg?branch=master)](https://travis-ci.org/devis/email-me)
+
 Rails engine providing shared email customization functionality between 
 apps.
 
