@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = EmailMe::VERSION
   s.authors     = ["Annie Huddleston"]
   s.email       = ["ahuddleston@devis.com"]
-  s.homepage    = "https://www.devis.com"
+  s.homepage    = "https://github.com/devis/email-me"
   s.summary     = "User customizable emails shared between the apps"
   s.description = "Simple email customization with Markdown and Liquid"
   s.license     = "MIT"
