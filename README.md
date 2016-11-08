@@ -94,6 +94,7 @@ If you are using HAML in your main application, you must configure HAML to run i
 whitespace get along.  Put a haml.rb file in config/initializers with the following line:
 
 ```
+Haml::Template.options[:ugly] = true
 ```
 
 Update mailers to use the mail templates.  Sample mailer (overriding Devis confirmation mailer:
