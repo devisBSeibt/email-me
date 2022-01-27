@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 2.2.4'
 
-  s.add_dependency "rails", "~> 4.2.6"
+  s.add_dependency "rails", ">= 4.2.6"
   s.add_dependency "ace-rails-ap", "~> 4.0.2"
   s.add_dependency "redcarpet", "~> 3.3.4"
   s.add_dependency "liquid", "~> 3.0.6"
